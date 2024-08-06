@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
     res.send(json);
 });
 
+app.get("/test", (req, res) => {
+    res.json({ mes: "Hello World!" });
+})
+
 app.get('/notes', (req, res) => {
     const { title } = req.query;
     if (title) {
